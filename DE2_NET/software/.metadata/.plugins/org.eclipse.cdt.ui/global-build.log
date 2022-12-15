@@ -1717,3 +1717,273 @@ the public mailing list cygwin@cygwin.com
 [simple_socket build complete]
 
 **** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 15176 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 15680 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 7344 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 476 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 10216 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 872 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 18404 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      4 [main] sh 13700 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 7032 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 796 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 19228 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 1984 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 4392 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 8456 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 2132 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      2 [main] sh 16704 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 4776 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 13492 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 12040 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 8076 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 4372 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 7580 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 11564 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 7972 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 13700 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 2420 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 14420 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 13092 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 8844 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 7968 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 8472 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 17084 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 18772 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 7112 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 11132 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 16856 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 13944 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 10632 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 12028 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      3 [main] sh 7260 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 12152 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 2424 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 7272 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 10924 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 11404 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 17436 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 17524 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 7176 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 9412 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 2512 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 2508 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Info: Building ../simple_socket_bsp/
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 17432 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 14096 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 13128 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 14040 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      2 [main] sh 11992 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 14488 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 17732 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      2 [main] echo 10056 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 12276 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 17636 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 3104 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 14560 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 19096 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+[simple_socket build complete]
+the public mailing list cygwin@cygwin.com
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 7856 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 12388 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 11628 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 10724 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 8380 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 8100 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 7908 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      2 [main] sh 1156 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[simple_socket build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project simple_socket ****
+
+make all 
+      1 [main] sh 10176 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 4052 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 8560 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../simple_socket_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../simple_socket_bsp/
+      1 [main] pwd 15072 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 10056 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:758: Warning: SOPC File J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo could not be found.
+      1 [main] sh 9792 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 1180 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      2 [main] sh 17652 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+[simple_socket build complete]
+the public mailing list cygwin@cygwin.com
+
+**** Build Finished ****

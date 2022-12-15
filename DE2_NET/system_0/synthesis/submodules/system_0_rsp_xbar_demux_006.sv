@@ -1,4 +1,4 @@
-// (C) 2001-2011 Altera Corporation. All rights reserved.
+// (C) 2001-2013 Altera Corporation. All rights reserved.
 // Your use of Altera Corporation's design tools, logic functions and other 
 // software and tools, and its AMPP partner logic functions, and any output 
 // files any of the foregoing (including device programming or simulation 
@@ -11,10 +11,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/11.0sp1/ip/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer.sv.terp#1 $
+// $Id: //acds/rel/13.0sp1/ip/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2011/04/07 $
-// $Author: max $
+// $Date: 2013/03/07 $
+// $Author: swbranch $
 
 // -------------------------------------
 // Merlin Demultiplexer
@@ -28,8 +28,8 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         system_0_rsp_xbar_demux_006
-//   ST_DATA_W:           84
-//   ST_CHANNEL_W:        24
+//   ST_DATA_W:           102
+//   ST_CHANNEL_W:        25
 //   NUM_OUTPUTS:         1
 //   VALID_WIDTH:         1
 // ------------------------------------------
@@ -46,8 +46,8 @@ module system_0_rsp_xbar_demux_006
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [84-1    : 0]   sink_data, // ST_DATA_W=84
-    input  [24-1 : 0]   sink_channel, // ST_CHANNEL_W=24
+    input  [102-1    : 0]   sink_data, // ST_DATA_W=102
+    input  [25-1 : 0]   sink_channel, // ST_CHANNEL_W=25
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,8 +56,8 @@ module system_0_rsp_xbar_demux_006
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [84-1    : 0] src0_data, // ST_DATA_W=84
-    output reg [24-1 : 0] src0_channel, // ST_CHANNEL_W=24
+    output reg [102-1    : 0] src0_data, // ST_DATA_W=102
+    output reg [25-1 : 0] src0_channel, // ST_CHANNEL_W=25
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,
@@ -93,7 +93,8 @@ module system_0_rsp_xbar_demux_006
     // Backpressure
     // -------------------
     assign ready_vector[0] = src0_ready;
-    assign sink_ready = |(sink_channel & ready_vector);
+
+    assign sink_ready = |(sink_channel & {{24{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

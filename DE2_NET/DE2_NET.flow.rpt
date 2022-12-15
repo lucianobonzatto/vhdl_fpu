@@ -1,5 +1,5 @@
 Flow report for DE2_NET
-Thu Jul 05 22:34:03 2018
+Wed Dec 14 23:14:10 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,14 +40,14 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Jul 05 22:33:59 2018           ;
+; Flow Status                        ; Successful - Wed Dec 14 23:14:06 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_NET                                         ;
 ; Top-level Entity Name              ; DE2_NET                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 7,275 / 33,216 ( 22 % )                         ;
+; Total logic elements               ; 7,272 / 33,216 ( 22 % )                         ;
 ;     Total combinational functions  ; 6,532 / 33,216 ( 20 % )                         ;
 ;     Dedicated logic registers      ; 4,241 / 33,216 ( 13 % )                         ;
 ; Total registers                    ; 4309                                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/05/2018 22:32:25 ;
+; Start date & time ; 12/14/2022 23:12:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_NET             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+----------------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name                                        ; Section Id ;
 +-------------------------------------+------------------------------------------------------------+---------------+----------------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 229044588195171.153084074410472                            ; --            ; --                                                 ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073160263910.167107036315288                            ; --            ; --                                                 ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_avalon_sc_fifo                              ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_merlin_burst_adapter                        ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_merlin_master_agent                         ; --         ;
@@ -229,7 +229,7 @@ applicable agreement for further details.
 ; PARTITION_NETLIST_TYPE              ; SOURCE                                                     ; --            ; --                                                 ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                        ; --            ; --                                                 ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --                                                 ; --         ;
-; SLD_INFO                            ; QSYS_NAME system_0 HAS_SOPCINFO 1 GENERATION_ID 1530840655 ; --            ; system_0                                           ; --         ;
+; SLD_INFO                            ; QSYS_NAME system_0 HAS_SOPCINFO 1 GENERATION_ID 1671069002 ; --            ; system_0                                           ; --         ;
 ; SOPCINFO_FILE                       ; system_0/synthesis/../../system_0.sopcinfo                 ; --            ; --                                                 ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --                                                 ; --         ;
 +-------------------------------------+------------------------------------------------------------+---------------+----------------------------------------------------+------------+
@@ -240,11 +240,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:49     ; 1.0                     ; 4907 MB             ; 00:00:43                           ;
-; Fitter                    ; 00:00:38     ; 1.0                     ; 5116 MB             ; 00:00:36                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4632 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4714 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:32     ; --                      ; --                  ; 00:01:24                           ;
+; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 4888 MB             ; 00:00:40                           ;
+; Fitter                    ; 00:00:34     ; 1.0                     ; 4988 MB             ; 00:00:33                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4653 MB             ; 00:00:03                           ;
+; Total                     ; 00:01:19     ; --                      ; --                  ; 00:01:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -253,10 +253,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; PC-JIMMY         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; PC-JIMMY         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; PC-JIMMY         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; PC-JIMMY         ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

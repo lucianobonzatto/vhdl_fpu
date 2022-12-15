@@ -9,12 +9,12 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="440" />
-   <clocksource preferredWidth="439" />
-   <frequency preferredWidth="421" />
+   <clockname preferredWidth="333" />
+   <clocksource preferredWidth="332" />
+   <frequency preferredWidth="319" />
   </columns>
  </clocktable>
- <library expandedCategories="Project/Terasic Technologies Inc,Library,Project" />
- <window width="1600" height="870" x="0" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="1296" height="696" x="-8" y="-8" />
  <hdlexample language="VERILOG" />
 </preferences>
