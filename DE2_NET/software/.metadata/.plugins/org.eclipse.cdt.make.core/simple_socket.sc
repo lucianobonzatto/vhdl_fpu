@@ -2,7 +2,7 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1881920358;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1881920358.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.141836503;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.335223088">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1903133460;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1903133460.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.946214271;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.476217563">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
@@ -19,21 +19,6 @@
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\usr\include"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\usr\include\w32api"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/h/nios2"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/nios2"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/UCOSII/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/HAL/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/drivers/inc"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\backward"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\usr\include"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\usr\include\w32api"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
@@ -249,10 +234,9 @@
 <definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
 <definedSymbol symbol="ALT_INICHE=1"/>
 <definedSymbol symbol="__ucosii__=1"/>
-<definedSymbol symbol="TSE_MY_SYSTEM=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1881920358;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1881920358.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.136173896;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.379288164">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1903133460;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1903133460.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1772876932;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.379461765">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
@@ -266,18 +250,6 @@
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\usr\include"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\usr\include\w32api"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/h/nios2"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/iniche/src/nios2"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/UCOSII/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/HAL/inc"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/"/>
-<includePath path="J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/software/simple_socket_bsp/drivers/inc"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\usr\include"/>
-<includePath path="J:\altera\13.0sp1\quartus\bin\cygwin\usr\include\w32api"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
@@ -486,7 +458,6 @@
 <definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
 <definedSymbol symbol="ALT_INICHE=1"/>
 <definedSymbol symbol="__ucosii__=1"/>
-<definedSymbol symbol="TSE_MY_SYSTEM=1"/>
 </collector>
 </instance>
 </scannerInfo>

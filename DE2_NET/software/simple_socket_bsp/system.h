@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
- * SOPC Builder design path: J:/Altera/13.0sp1/projects/DE2_CD/DE2_demonstrations_Qsys/DE2_NET/system_0.sopcinfo
+ * SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
  *
- * Generated: Thu Jul 05 22:54:04 BRT 2018
+ * Generated: Fri Dec 16 00:52:31 BRST 2022
  */
 
 /*
@@ -169,6 +169,7 @@
 #define __ISP1362_IF
 #define __SEG7_LUT_8
 #define __SRAM_16BIT_512K
+#define __WEB_IF
 
 
 /*
@@ -604,7 +605,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1530840655
+#define SYSID_QSYS_0_TIMESTAMP 1671153705
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -761,5 +762,19 @@
 #define OS_TMR_CFG_TICKS_PER_SEC 10
 #define OS_TMR_CFG_WHEEL_SIZE 2
 #define OS_TMR_EN 0
+
+
+/*
+ * web_if_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_web_if_0 web_if
+#define WEB_IF_0_BASE 0x0
+#define WEB_IF_0_IRQ -1
+#define WEB_IF_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WEB_IF_0_NAME "/dev/web_if_0"
+#define WEB_IF_0_SPAN 32
+#define WEB_IF_0_TYPE "web_if"
 
 #endif /* __SYSTEM_H_ */

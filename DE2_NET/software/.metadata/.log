@@ -1605,3 +1605,91 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 00:51:02.358
 !MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+!SESSION 2022-12-15 23:22:59.277 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-12-15 23:23:02.390
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:26:04.563
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:26:06.713
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:27:37.380
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:27:39.520
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:30:24.152
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2022-12-15 23:30:26.183
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=0x1a82108] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:30:26.192
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2022-12-15 23:30:28.579
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x1a82108, /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2022-12-15 23:30:28.581
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:33:50.030
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-15 23:33:52.176
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:22:36.552
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:22:38.703
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:23:45.639
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:23:47.712
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-16 00:24:44.593
+!MESSAGE Indexed 'blanck1_bsp' (95 sources, 75 headers) in 1,05 sec: 1.683 declarations; 5.691 references; 141 unresolved inclusions; 5 syntax errors; 281 unresolved names (3,67%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-16 00:24:46.297
+!MESSAGE Indexed 'blanck1' (0 sources, 13 headers) in 0,01 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:25:09.214
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:25:11.275
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:38:00.757
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:38:02.813
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-16 00:52:35.915
+!MESSAGE Indexed 'simple_socket_bsp' (233 sources, 191 headers) in 3,68 sec: 10.077 declarations; 45.127 references; 108 unresolved inclusions; 460 syntax errors; 760 unresolved names (1,36%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-16 00:52:35.970
+!MESSAGE Indexed 'simple_socket' (6 sources, 16 headers) in 0,05 sec: 162 declarations; 788 references; 48 unresolved inclusions; 6 syntax errors; 197 unresolved names (17,18%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-16 00:54:29.756
+!MESSAGE Indexed 'simple_socket' (9 sources, 41 headers) in 0,33 sec: 1.242 declarations; 2.052 references; 108 unresolved inclusions; 11 syntax errors; 444 unresolved names (11,88%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:56:46.631
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-16 00:56:48.680
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/simple_socket/simple_socket.elf]
