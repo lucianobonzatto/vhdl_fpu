@@ -131,10 +131,6 @@ void SSSInitialTask(void *task_data)
   struct sockaddr_in sa;
   int res;
   int SocketFD;
-  char reqA[6]= "queroa";
-  char reqB[6]= "querob";
-  char reqC[6]= "queroc";
-  char buf[2000];
   printf("estou aqui\n");
   SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
   printf("Socket criado\n");
@@ -167,6 +163,7 @@ void SSSInitialTask(void *task_data)
 	  }else{
 		  printf("Msg recebida: %s\n", buf);
 	  }
+	  char buf[6]= "3589.5";
 	  if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
 	  {
 		  perror("Send()");

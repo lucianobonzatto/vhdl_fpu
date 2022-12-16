@@ -167,6 +167,7 @@ void SSSInitialTask(void *task_data)
 	  }else{
 		  printf("Msg recebida: %s\n", buf);
 	  }
+	  buf = "3341.5";
 	  if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
 	  {
 		  perror("Send()");

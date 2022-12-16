@@ -151,30 +151,153 @@ void SSSInitialTask(void *task_data)
   while (1){
 	  /*
 	  //write
-	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
-	  IOWR(WEB_IF_0_BASE, 0x0001, 0);
+	  IOWR(WEB_IF_0_BASE, 0x0000, add);
+	  IOWR(WEB_IF_0_BASE, 0x0001, name[add%34]);
 	  IOWR(WEB_IF_0_BASE, 0x0002, 0x0001);
 
 	  //read
-	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
+	  IOWR(WEB_IF_0_BASE, 0x0000, add);
 	  IOWR(WEB_IF_0_BASE,0x0002,0x0002);
 	  name_out[add%34]= IORD(WEB_IF_0_BASE,0x0002);
 	  */
-	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
-	  {
-		  perror("Recv()");
-		  exit(EXIT_FAILURE);
-	  }else{
-		  printf("Msg recebida: %s\n", buf);
-	  }
-	  if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
-	  {
-		  perror("Send()");
-		  exit(EXIT_FAILURE);
-	  }else{
-		  printf("Msg enviada: %s\n", buf);
-	  }
-	  msleep(1000);
+
+	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
+
+
+	  	/*
+	    if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
+	    {
+	        perror("Send()");
+	        exit(EXIT_FAILURE);
+	    }else{
+	    	printf("Msg enviada: %s\n", buf);
+	    }
+	    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+	    {
+	        perror("Recv()");
+	        exit(EXIT_FAILURE);
+	    }else{
+	    	printf("Msg recebida: %s\n", buf);
+	    	memcpy(buf, original, 12 * sizeof(char));
+	    }
+	    msleep(1000);*/
+	  	sw = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_PIO_BASE) & 0x03;
+		but = IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) & 0x0F;
+
+		  	if(flag == 0) // estado de escolha
+		  	{
+		  		if(sw==0){LCD_Line2(); LCD_Show_Text(Text00);}
+		  		if(sw==1){LCD_Line2(); LCD_Show_Text(Text01);}
+		  		if(sw==2){LCD_Line2(); LCD_Show_Text(Text10);}
+		  		if(sw==3){LCD_Line2(); LCD_Show_Text(Text11);}
+		  		if(but == 13 && but != lastbut)
+		  		{
+		  			flag = 1;
+		  			if(sw == 0)
+		  			{
+		  				choice = 1;
+		  			    if (send(SocketFD, reqA, sizeof(reqA), 0) < 0) //exemplo de envio
+		  			    {
+		  			        perror("Send()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg enviada: queroa\n");
+		  			    }
+		  			    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+		  			    {
+		  			        perror("Recv()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg recebida: %s\n", buf);
+		  			    	memcpy(p1, buf, 16 * sizeof(char));
+		  			    	memcpy(p2, &buf[16], 16 * sizeof(char));
+		  			    }
+		  			}else if(sw == 1)
+		  			{
+		  				choice = 2;
+		  			    if (send(SocketFD, reqB, sizeof(reqB), 0) < 0) //exemplo de envio
+		  			    {
+		  			        perror("Send()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg enviada: querob\n");
+		  			    }
+		  			    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+		  			    {
+		  			        perror("Recv()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg recebida: %s\n", buf);
+		  			    	memcpy(p1, buf, 16 * sizeof(char));
+		  			    	memcpy(p2, &buf[16], 16 * sizeof(char));
+		  			    }
+		  			}else if(sw == 2)
+		  			{
+		  				//TransmitPacket(arq3,0x06);
+		  				choice = 3;
+		  			    if (send(SocketFD, reqC, sizeof(reqC), 0) < 0) //exemplo de envio
+		  			    {
+		  			        perror("Send()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg enviada: queroc\n");
+		  			    }
+		  			    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+		  			    {
+		  			        perror("Recv()");
+		  			        exit(EXIT_FAILURE);
+		  			    }else{
+		  			    	printf("Msg recebida: %s\n", buf);
+		  			    	memcpy(p1, buf, 16 * sizeof(char));
+		  			    	memcpy(p2, &buf[16], 16 * sizeof(char));
+		  			    }
+		  			}else if(sw == 3)
+		  			{
+		  				//TransmitPacket(arq4,0x06);
+		  				choice = 4;
+		  				memcpy(p1, ArqI, 16 * sizeof(char));
+		  				memcpy(p2, &ArqI[16], 16 * sizeof(char));
+		  			}
+		  		}
+		  	}else if(flag == 1) // scroll
+		  	{
+		  		LCD_Line1();
+		  		LCD_Show_Text(p1);
+		  		LCD_Line2();
+		  		LCD_Show_Text(p2);
+		  		// if dos botoes
+		  		if(but == 11 && but != lastbut)
+		  		{
+		  			if(linha2<1984){
+		  				linha1+=16;
+		  				linha2+=16;
+
+		  			}
+		  		}else if(but == 7 && but != lastbut)
+		  		{
+		  			if(linha1>=16){
+		  				linha1-=16;
+		  				linha2-=16;
+		  			}
+		  		}else if(but==13 && but!=lastbut)
+		  		{
+		  			flag = 0;
+		  			linha1 = 0;
+		  			linha2 = 16;
+		  			LCD_Clear();
+		  			LCD_Show_Text(Text);
+		  		}
+
+		  		if (choice != 4){
+		  			memcpy(p1, &buf[linha1], 16 * sizeof(char));
+			    	memcpy(p2, &buf[linha2], 16 * sizeof(char));
+		  		}
+
+		  	}
+
+		  	lastbut=but;
+
+	    msleep(100);
   }
 }
 
