@@ -8,7 +8,7 @@ Entity web_interface is
 			CS:			IN std_logic;
 			READ_EN:		IN std_logic;
 			WRITE_EN:	IN std_logic;
-			ADD:			IN std_logic_vector (2 downto 0);
+			ADD:			IN std_logic_vector (3 downto 0);
 			WRITEDATA:	IN  std_logic_vector(31 downto 0);
 			READDATA:	OUT std_logic_vector(31 downto 0));
 end entity;
@@ -45,7 +45,16 @@ Begin
 									DATA_IN	=> WRITEDATA,
 									DATA_OUT	=> operation);
 									
-	write_en_val_1 <= CS and (not(ADD(2))) and (not(ADD(1)))	and (not(ADD(0)))	and WRITE_EN;
-	write_en_val_2 <= CS and (not(ADD(2))) and (not(ADD(1)))	and 	   ADD(0)	and WRITE_EN;
-	write_en_oper	<= CS and (not(ADD(2))) and 	  	ADD(1)	and (not(ADD(0)))	and WRITE_EN;
+	write_en_val_1 <= CS and (not(ADD(3))) and (not(ADD(2))) and (not(ADD(1)))	and (not(ADD(0)))	and WRITE_EN;
+	write_en_val_2 <= CS and (not(ADD(3))) and (not(ADD(2))) and (not(ADD(1)))	and 	   ADD(0)	and WRITE_EN;
+	write_en_oper	<= CS and (not(ADD(3))) and (not(ADD(2))) and 	  	ADD(1)	and (not(ADD(0)))	and WRITE_EN;
+	
+	READDATA			<= x"00000000" when CS = '0' 			else
+							x"00000000" when RST = '0' 		else
+							x"00000000" when READ_EN = '0'	else
+							value_1		when ADD = "1000" 	else
+							value_2		when ADD = "1001" 	else
+							operation	when ADD = "1010" 	else
+							x"00000000";
+	
 End architecture;

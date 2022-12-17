@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 Entity reg_32 is
 	PORT(	CLK:				IN STD_LOGIC;
 			RST:				IN STD_LOGIC;
-			WRITE_EN:			IN STD_LOGIC;
+			WRITE_EN:		IN STD_LOGIC;
 			DATA_IN:			IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			DATA_OUT:		OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
 end entity;
