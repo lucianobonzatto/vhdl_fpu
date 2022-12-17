@@ -2,16 +2,8 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.956028275;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.956028275.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1463133029;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.687726342">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1363106613;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1363106613.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.581380379;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1069454724">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h/nios2"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/nios2"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/UCOSII/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/HAL/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/drivers/inc"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\backward"/>
@@ -229,24 +221,10 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
-<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
-<definedSymbol symbol="__hal__=1"/>
-<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
-<definedSymbol symbol="ALT_INICHE=1"/>
-<definedSymbol symbol="__ucosii__=1"/>
-<definedSymbol symbol="TSE_MY_SYSTEM=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.956028275;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.956028275.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1595431079;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.683627927">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1363106613;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1363106613.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.669041111;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.462004363">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/h/nios2"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/iniche/src/nios2"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/UCOSII/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/HAL/inc"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp"/>
-<includePath path="C:/vhdl_fpu/DE2_NET/software/simple_socket_bsp/drivers/inc"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\13.0sp1\quartus\bin\cygwin\usr\include"/>
@@ -454,12 +432,6 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
-<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
-<definedSymbol symbol="__hal__=1"/>
-<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
-<definedSymbol symbol="ALT_INICHE=1"/>
-<definedSymbol symbol="__ucosii__=1"/>
-<definedSymbol symbol="TSE_MY_SYSTEM=1"/>
 </collector>
 </instance>
 </scannerInfo>

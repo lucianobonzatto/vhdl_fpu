@@ -5127,12 +5127,12 @@ void SSSInitialTask(void *task_data)
 	exit(EXIT_FAILURE);
   8023e4:	01000044 	movi	r4,1
   8023e8:	0804c5c0 	call	804c5c <exit>
-	  //read
 	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
 	  IOWR(WEB_IF_0_BASE,0x0002,0x0002);
 	  name_out[add%34]= IORD(WEB_IF_0_BASE,0x0002);
 	  */
-	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+
+	    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
   8023ec:	e17e0a84 	addi	r5,fp,-2006
   8023f0:	e13dd517 	ldw	r4,-2220(fp)
   8023f4:	0181f404 	movi	r6,2000
@@ -5140,22 +5140,23 @@ void SSSInitialTask(void *task_data)
   8023fc:	0829d840 	call	829d84 <t_recv>
   802400:	1004403a 	cmpge	r2,r2,zero
   802404:	1000051e 	bne	r2,zero,80241c <SSSInitialTask+0x220>
-	  {
-		  perror("Recv()");
+	    {
+	        perror("Recv()");
   802408:	01002134 	movhi	r4,132
   80240c:	211ef404 	addi	r4,r4,31696
   802410:	080517c0 	call	80517c <perror>
-		  exit(EXIT_FAILURE);
+	        exit(EXIT_FAILURE);
   802414:	01000044 	movi	r4,1
   802418:	0804c5c0 	call	804c5c <exit>
-	  }else{
-		  printf("Msg recebida: %s\n", buf);
+	    }else{
+	    	printf("Msg recebida: %s\n", buf);
   80241c:	e17e0a84 	addi	r5,fp,-2006
   802420:	01002134 	movhi	r4,132
   802424:	211ef604 	addi	r4,r4,31704
   802428:	08051900 	call	805190 <printf>
-	  }
-	  if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
+	    }
+
+	    if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
   80242c:	e17e0a84 	addi	r5,fp,-2006
   802430:	e13dd517 	ldw	r4,-2220(fp)
   802434:	0181f404 	movi	r6,2000
@@ -5163,22 +5164,22 @@ void SSSInitialTask(void *task_data)
   80243c:	082a1f00 	call	82a1f0 <t_send>
   802440:	1004403a 	cmpge	r2,r2,zero
   802444:	1000051e 	bne	r2,zero,80245c <SSSInitialTask+0x260>
-	  {
-		  perror("Send()");
+	    {
+	        perror("Send()");
   802448:	01002134 	movhi	r4,132
   80244c:	211efb04 	addi	r4,r4,31724
   802450:	080517c0 	call	80517c <perror>
-		  exit(EXIT_FAILURE);
+	        exit(EXIT_FAILURE);
   802454:	01000044 	movi	r4,1
   802458:	0804c5c0 	call	804c5c <exit>
-	  }else{
-		  printf("Msg enviada: %s\n", buf);
+	    }else{
+	    	printf("Msg enviada: %s\n", buf);
   80245c:	e17e0a84 	addi	r5,fp,-2006
   802460:	01002134 	movhi	r4,132
   802464:	211efd04 	addi	r4,r4,31732
   802468:	08051900 	call	805190 <printf>
-	  }
-	  msleep(1000);
+	    }
+	    msleep(1000);
   80246c:	010003f4 	movhi	r4,15
   802470:	21109004 	addi	r4,r4,16960
   802474:	080ecf00 	call	80ecf0 <usleep>

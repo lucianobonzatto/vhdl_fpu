@@ -147,34 +147,35 @@ void SSSInitialTask(void *task_data)
 	close(SocketFD);
 	exit(EXIT_FAILURE);
   }
-
   while (1){
+
 	  /*
 	  //write
 	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
 	  IOWR(WEB_IF_0_BASE, 0x0001, 0);
 	  IOWR(WEB_IF_0_BASE, 0x0002, 0x0001);
-
 	  //read
 	  IOWR(WEB_IF_0_BASE, 0x0000, 0);
 	  IOWR(WEB_IF_0_BASE,0x0002,0x0002);
 	  name_out[add%34]= IORD(WEB_IF_0_BASE,0x0002);
 	  */
-	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
-	  {
-		  perror("Recv()");
-		  exit(EXIT_FAILURE);
-	  }else{
-		  printf("Msg recebida: %s\n", buf);
-	  }
-	  if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
-	  {
-		  perror("Send()");
-		  exit(EXIT_FAILURE);
-	  }else{
-		  printf("Msg enviada: %s\n", buf);
-	  }
-	  msleep(1000);
+
+	    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+	    {
+	        perror("Recv()");
+	        exit(EXIT_FAILURE);
+	    }else{
+	    	printf("Msg recebida: %s\n", buf);
+	    }
+
+	    if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
+	    {
+	        perror("Send()");
+	        exit(EXIT_FAILURE);
+	    }else{
+	    	printf("Msg enviada: %s\n", buf);
+	    }
+	    msleep(1000);
   }
 }
 
