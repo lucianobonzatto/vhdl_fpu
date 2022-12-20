@@ -25,6 +25,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdint.h>
 #include <io.h>
 #include <fcntl.h>
 /* MicroC/OS-II definitions */
@@ -67,6 +68,27 @@ struct inet_taskinfo ssstask = {
       4,
       APP_STACK_SIZE,
 };
+
+#define FLOAT_SIZE sizeof(float)
+
+union ufloat {
+	float f;
+	uint32_t b;
+};
+
+void print_float(float f) {
+	union ufloat uf;
+	uf.f = f;
+	int i = 0;
+	int j = 0;
+	for(i = 0; i < 32; i++) {
+		if((uf.b & 1<<i) == 1<<i) {
+			printf("1");
+		} else {
+			printf("0");
+		}
+	}
+}
 
 /* SSSInitialTask will initialize the NicheStack
  * TCP/IP Stack and then initialize the rest of the Simple Socket Server example 
@@ -114,47 +136,24 @@ void SSSInitialTask(void *task_data)
   //alt_uCOSIIErrorHandler(error_code, 0);
   LCD_Init();
   int sw, but;
-  char Text[16] = "Requisitando aq";
-  LCD_Show_Text(Text);
-  char Text00[16] = "arquivoA.txt   ";
-  char Text01[16] = "arquivoB.txt   ";
-  char Text10[16] = "arquivoC.txt   ";
-  char Text11[16] = "invalido.txt   ";
-  char ArqI[32] = "ARQ INVALIDO !!!ARQ INVALIDO !!!";
-  char p1[16];
-  char p2[16];
-  char flag = 0; //0-> escolhendo, 1->scroll
-  char lastbut = 0x0F;
-  unsigned int linha1=0;
-  unsigned int linha2=16;
-  char choice = 0;
   struct sockaddr_in sa;
   int res;
   int SocketFD;
-  char reqA[6]= "queroa";
-  char reqB[6]= "querob";
-  char reqC[6]= "queroc";
-  char buf[2000];
+  char buf[1024];
   printf("estou aqui\n");
   SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
   printf("Socket criado\n");
   memset(&sa, 0, sizeof sa);
   sa.sin_family = AF_INET;
   sa.sin_port = htons(7777); // ALTERAR PORTA A SER UTILIZADA AQUI
-  res = inet_pton(AF_INET, "192.168.0.73", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
+  res = inet_pton(AF_INET, "192.168.2.106", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
   if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
 	perror("connect failed");
 	close(SocketFD);
 	exit(EXIT_FAILURE);
   }
   while (1){
-	  //write
-	  printf("0x0000 -> 0x000f\n");
-	  IOWR(FPU_0_BASE, 0x0000, 0x000f);
-	  printf("0x0001 -> 0x00f0\n");
-	  IOWR(FPU_0_BASE, 0x0001, 0x00f0);
-	  printf("0x0002 -> 0x0f00\n");
-	  IOWR(FPU_0_BASE, 0x0002, 0x0f00);
+
 	  //read
 	  int val1_res = IORD(FPU_0_BASE,0x0008);
 	  printf("val1_res -> %d\n", val1_res);
@@ -162,13 +161,89 @@ void SSSInitialTask(void *task_data)
 	  printf("val2_res -> %d\n", val2_res);
 	  int oper_res = IORD(FPU_0_BASE,0x000a);
 	  printf("oper_res -> %d\n", oper_res);
-
-	    if (recv(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de recebimento
+	  int buf_size = recv(SocketFD, buf, sizeof(buf), 0);
+	    if (buf_size < 0) //exemplo de recebimento
 	    {
 	        perror("Recv()");
 	        exit(EXIT_FAILURE);
 	    }else{
-	    	printf("Msg recebida: %s\n", buf);
+	    	buf[buf_size] = '\0';
+	    	printf("Msg recebida (len %d): %s\n", buf_size, buf);
+	    }
+
+	    LCD_Show_Text(buf);
+	    int first_space = -1;
+	    int second_space = -1;
+	    int last_index = -1;
+	    int i = 0;
+	    char float1[1024] = "\0";
+	    char float2[1024] = "\0";
+	    int float1_idx = 0;
+	    int float2_idx = 0;
+	    for(i = 0; i < buf_size; i++) {
+	    	if(buf[i] == ' ') {
+	    		if(first_space == -1) {
+	    			first_space = i;
+	    		} else if(second_space == -1) {
+	    			second_space = i;
+	    		}
+	    	} else if(buf[i] == '\0') {
+	    		last_index = i;
+	    		break;
+	    	} else {
+	    		if(first_space == -1) {
+	    			float1[float1_idx++] = buf[i];
+	    		} else if(second_space != -1) {
+	    			float2[float2_idx++] = buf[i];
+	    		}
+	    	}
+	    }
+	    float1[float1_idx] = '\0';
+	    float2[float2_idx] = '\0';
+
+	    int operation = 0;
+	    int valida = first_space != -1 && second_space != -1;
+	    valida &= second_space-first_space == 2;
+	    valida &= float1_idx > 0 && float2_idx > 0;
+	    if(valida) {
+		    char op_char = buf[first_space+1];
+		    switch(op_char) {
+		    case '+':
+		    	operation = 0;
+		    	break;
+		    case '-':
+		    	operation = 1;
+		    	break;
+		    case '*':
+		    	operation = 2;
+		    	break;
+		    case '/':
+		    	operation = 3;
+		    	break;
+		    default:
+		    	break;
+		    }
+		    float val1 = atof(float1);
+		    float val2 = atof(float2);
+		    printf("COMANDO VALIDO: %f %d %f\n", val1, operation, val2);
+		    printf("Escrevendo dados na FPU...\n");
+
+		  printf("VALOR 1: %f -> ", val1);
+		  print_float(val1);
+		  printf("\nVALOR 2: %f -> ", val2);
+		  print_float(val2);
+		  printf("\n");
+		  //write
+		  printf("0x0000 -> 0x000f\n");
+		  IOWR(FPU_0_BASE, 0x0000, 0x000f);
+		  printf("0x0001 -> 0x00f0\n");
+		  IOWR(FPU_0_BASE, 0x0001, 0x00f0);
+		  printf("0x0002 -> 0x0f00\n");
+		  IOWR(FPU_0_BASE, 0x0002, 0x0f00);
+
+	    } else {
+	    	printf("COMANDO INVALIDO\n");
+	    	buf[0] = '\0';
 	    }
 
 	    if (send(SocketFD, buf, sizeof(buf), 0) < 0) //exemplo de envio
