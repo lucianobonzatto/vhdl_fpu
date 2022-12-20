@@ -9,7 +9,7 @@ add wave -position end  sim:/web_interface_tb/DUT/RST
 add wave -position end  sim:/web_interface_tb/DUT/CS
 add wave -position end  sim:/web_interface_tb/DUT/READ_EN
 add wave -position end  sim:/web_interface_tb/DUT/WRITE_EN
-add wave -BIN -position end  sim:/web_interface_tb/DUT/ADD
+add wave -hex -position end  sim:/web_interface_tb/DUT/ADD
 add wave -hex -position end  sim:/web_interface_tb/DUT/WRITEDATA
 add wave -hex -position end  sim:/web_interface_tb/DUT/READDATA
 add wave -hex -position end  sim:/web_interface_tb/DUT/value_1

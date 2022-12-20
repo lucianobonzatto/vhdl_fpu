@@ -420,15 +420,6 @@ system_0 	u0	(
                  .zs_ras_n_from_the_sdram_0(DRAM_RAS_N),
                  .zs_we_n_from_the_sdram_0(DRAM_WE_N),
 
-                  // the_sram_0
-					  .sram_0_avalon_slave_0_export_DQ      (SRAM_DQ),      //    sram_0_avalon_slave_0_export.DQ
-                 .sram_0_avalon_slave_0_export_ADDR    (SRAM_ADDR),    //    .ADDR
-                 .sram_0_avalon_slave_0_export_UB_N    (SRAM_UB_N),    //    .UB_N
-                 .sram_0_avalon_slave_0_export_LB_N    (SRAM_LB_N),    //    .LB_N
-                 .sram_0_avalon_slave_0_export_WE_N    (SRAM_WE_N),    //    .WE_N
-                 .sram_0_avalon_slave_0_export_CE_N    (SRAM_CE_N),    //    .CE_N
-                 .sram_0_avalon_slave_0_export_OE_N    (SRAM_OE_N),    //    .OE_N
-
                 // the_switch_pio
                  .in_port_to_the_switch_pio(SW),
 
