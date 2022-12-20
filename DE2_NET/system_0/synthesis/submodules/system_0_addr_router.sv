@@ -47,7 +47,7 @@ module system_0_addr_router_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 18 
+               DEFAULT_DESTID = 17 
    )
   (output [91 - 87 : 0] default_destination_id,
    output [24-1 : 0] default_wr_channel,
@@ -192,7 +192,7 @@ module system_0_addr_router
     // ( 0x800000 .. 0x1000000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 25'h800000   ) begin
             src_channel = 24'b00010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 18;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 17;
     end
 
     // ( 0x1400000 .. 0x1800000 )
@@ -216,7 +216,7 @@ module system_0_addr_router
     // ( 0x1a82108 .. 0x1a82110 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 25'h1a82108   ) begin
             src_channel = 24'b10000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 20;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 19;
     end
 
 end
