@@ -106,15 +106,32 @@ signal value_1, value_2, operation: std_logic_vector(31 downto 0);
 signal result_divi, result_mult, result_soma, result_subt: std_logic_vector(31 downto 0);
 signal result: std_logic_vector(31 downto 0);
 signal write_en_val_1, write_en_val_2, write_en_oper: std_logic;
-Begin						
+Begin				
+	VAL1: reg_32 port map(	CLK		=> CLK,
+									RST		=> RST,
+									WRITE_EN	=> write_en_val_1,
+									DATA_IN	=> WRITEDATA,
+									DATA_OUT	=> value_1);
+									
+	VAL2: reg_32 port map(	CLK		=> CLK,
+									RST		=> RST,
+									WRITE_EN	=> write_en_val_2,
+									DATA_IN	=> WRITEDATA,
+									DATA_OUT	=> value_2);
+									
+	OPER: reg_32 port map(	CLK		=> CLK,
+									RST		=> RST,
+									WRITE_EN	=> write_en_oper,
+									DATA_IN	=> WRITEDATA,
+									DATA_OUT	=> operation);		
 	FPU_EXT: fpu port map(
               clk_i           => CLK,
               opa_i        => value_1,
               opb_i        => value_2,
               fpu_op_i        => operation(2 downto 0),
               rmode_i         => "00",
-              output_o     => READDATA,
-              start_i        => '1',
+              output_o     => result,
+              start_i        => '0',
               ready_o         => open,
               ine_o             => open,
               overflow_o      => open,
@@ -125,5 +142,18 @@ Begin
               qnan_o            => open,
               snan_o            => open
     );
+
+	write_en_val_1 <= CS and (not(ADD(3))) and (not(ADD(2))) and (not(ADD(1)))	and (not(ADD(0)))	and WRITE_EN;
+	write_en_val_2 <= CS and (not(ADD(3))) and (not(ADD(2))) and (not(ADD(1)))	and 	   ADD(0)	and WRITE_EN;
+	write_en_oper	<= CS and (not(ADD(3))) and (not(ADD(2))) and 	  	ADD(1)	and (not(ADD(0)))	and WRITE_EN;
+	
+	READDATA			<= x"00000000" when CS = '0' 			else
+							x"00000000" when RST = '0' 		else
+							x"00000000" when READ_EN = '0'	else
+							value_1		when ADD = "1000" 	else
+							value_2		when ADD = "1001" 	else
+							operation	when ADD = "1010" 	else
+							result	   when ADD = "1011"    else
+							x"00000000";
 	
 End architecture;

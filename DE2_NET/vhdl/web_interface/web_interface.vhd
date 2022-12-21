@@ -153,7 +153,7 @@ Begin
 							value_1		when ADD = "1000" 	else
 							value_2		when ADD = "1001" 	else
 							operation	when ADD = "1010" 	else
-							result	    when ADD = "1011"   else
+							result	   when ADD = "1011"    else
 							x"00000000";
 	
 End architecture;

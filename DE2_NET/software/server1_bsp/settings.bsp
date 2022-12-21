@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>19/12/2022 22:25:30</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1671495930031</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>21/12/2022 02:18:54</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1671596334612</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\vhdl_fpu\DE2_NET\software\server1_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\vhdl_fpu\DE2_NET\system_0.sopcinfo</SopcDesignFile>
@@ -1799,7 +1799,7 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>fpu_0</slaveDescriptor>
+                <slaveDescriptor>web_fpu_0</slaveDescriptor>
                 <addressRange>0x00000000 - 0x0000003F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>

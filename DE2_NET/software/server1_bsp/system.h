@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
  *
- * Generated: Mon Dec 19 22:25:30 BRST 2022
+ * Generated: Wed Dec 21 02:18:55 BRST 2022
  */
 
 /*
@@ -166,9 +166,9 @@
 #define __AUDIO_DAC_FIFO
 #define __BINARY_VGA_CONTROLLER
 #define __DM9000A
-#define __FPU
 #define __ISP1362_IF
 #define __SEG7_LUT_8
+#define __WEB_FPU
 
 
 /*
@@ -417,20 +417,6 @@
 
 
 /*
- * fpu_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_fpu_0 fpu
-#define FPU_0_BASE 0x0
-#define FPU_0_IRQ -1
-#define FPU_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define FPU_0_NAME "/dev/fpu_0"
-#define FPU_0_SPAN 64
-#define FPU_0_TYPE "fpu"
-
-
-/*
  * hal configuration
  *
  */
@@ -604,7 +590,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1671495253
+#define SYSID_QSYS_0_TIMESTAMP 1671595929
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -761,5 +747,19 @@
 #define OS_TMR_CFG_TICKS_PER_SEC 10
 #define OS_TMR_CFG_WHEEL_SIZE 2
 #define OS_TMR_EN 0
+
+
+/*
+ * web_fpu_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_web_fpu_0 web_fpu
+#define WEB_FPU_0_BASE 0x0
+#define WEB_FPU_0_IRQ -1
+#define WEB_FPU_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define WEB_FPU_0_NAME "/dev/web_fpu_0"
+#define WEB_FPU_0_SPAN 64
+#define WEB_FPU_0_TYPE "web_fpu"
 
 #endif /* __SYSTEM_H_ */

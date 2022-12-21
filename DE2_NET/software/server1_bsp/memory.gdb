@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
 # SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
 #
-# Generated: Mon Dec 19 22:25:30 BRST 2022
+# Generated: Wed Dec 21 02:18:55 BRST 2022
 
 # DO NOT MODIFY THIS FILE
 #
