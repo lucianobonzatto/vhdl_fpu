@@ -1,54 +1,55 @@
+DESCRIÇÃO:
 
-https://github.com/lucianobonzatto/vhdl_fpu
+	https://github.com/lucianobonzatto/vhdl_fpu
 
-Construção de uma fpu de 32 bits que pode ser acessada via socket utilizando FPGA
-que possui as quatro operações básicas soma, subtração, mutiplicação e divisão
+	Construção de uma fpu de 32 bits que pode ser acessada via socket utilizando FPGA
+	que possui as quatro operações básicas soma, subtração, mutiplicação e divisão
 
-a fpu utiliza a construção da IEEE:	1bit de sinal
-					8bits de expoente
-					23bits de mantissa
+	a fpu utiliza a construção da IEEE:	1bit de sinal
+						8bits de expoente
+						23bits de mantissa
 
-para a fpu utilizamos uma biblioteca presente na opencores.org
+	para a fpu utilizamos uma biblioteca presente na opencores.org
 
-Como interação, o server recebe uma string e envia para o NIOS que utiliza para formular os valores e a operação
-com isso, o NIOS envia para user hardware esses valores, salvando eles nos seus respectivos registradores
-e então le o resultado obtido e envia ele ao server.
+	Como interação, o server recebe uma string e envia para o NIOS que utiliza para formular os valores e a operação
+	com isso, o NIOS envia para user hardware esses valores, salvando eles nos seus respectivos registradores
+	e então le o resultado obtido e envia ele ao server.
 
 ARQUIVOS:
 
-tcpserver_fpu		-> server em python que a FPGA se conecta
-DE2_NET			-> projeto do Quartus II versão 13
-DE2_NET/vhdl		-> arquivos VHDL que fazem a conexão com o NIOS
-DE2_NET/fpu		-> biblioteca utilizada para a execução da fpu de 32bits
-DE2_NET/simulation	-> arquivos de simulação do multisim utilizados para testar a biblioteca
-DE2_NET/software	-> workspace do eclipse onde esta o projeot do NIOS
+	tcpserver_fpu		-> server em python que a FPGA se conecta
+	DE2_NET			-> projeto do Quartus II versão 13
+	DE2_NET/vhdl		-> arquivos VHDL que fazem a conexão com o NIOS
+	DE2_NET/fpu		-> biblioteca utilizada para a execução da fpu de 32bits
+	DE2_NET/simulation	-> arquivos de simulação do multisim utilizados para testar a biblioteca
+	DE2_NET/software	-> workspace do eclipse onde esta o projeot do NIOS
 
 COMO RODAR:
-1 Utilize o Quartus II versão 13.0sp1
-2 Vá na aba Files do Project Navigator e delete o arquivo system_0/synthesis/system_0.qip
-3 Abre o Qsys em Tools->Qsys
-4 Selecione o arquivo system_0.qsys e clique em Abrir
-5 De OK ou Close no que aparecer
-6 Va para aba Generation e clique em Generate
-7 Feche o Qsys
-8 No Project Navigator, aba Files, clique com o botão direito em Files->Add/Remove Files in Project
-9 Clique no [...], entre em system_0/synthesis, mude o tipo de arquivo para todos, selecione o arquivo system_0.qip
+	1 Utilize o Quartus II versão 13.0sp1
+	2 Vá na aba Files do Project Navigator e delete o arquivo system_0/synthesis/system_0.qip
+	3 Abre o Qsys em Tools->Qsys
+	4 Selecione o arquivo system_0.qsys e clique em Abrir
+	5 De OK ou Close no que aparecer
+	6 Va para aba Generation e clique em Generate
+	7 Feche o Qsys
+	8 No Project Navigator, aba Files, clique com o botão direito em Files->Add/Remove Files in Project
+	9 Clique no [...], entre em system_0/synthesis, mude o tipo de arquivo para todos, selecione o arquivo system_0.qip
 
-12 Clique em Add-> Apply-> OK
-13 Abra o Programmer, aperte Auto Detect e aperte Start, caso o Progress esteja verde, continue caso contrário verifique conexão da JTAG
-14 Deixe aberto o Programmer e a janela "OpenCore Plus Status" e inicie o Eclipse em Tools -> Nios II Software Build Tools for Eclipse
-15 No Workspace selecione SeuCaminhoAtéaPasta\DE2_NET\software
-16 Agora existem 2 opções:
-	16.1 Se os projetos simple_socket e simple_socket_bsp estão aparecendo e são expandíveis (pastinha cor amarela):
-		16.1.1 Clique com o botão direito em cada projeto e clique em Clean Project
-		16.1.2 Abra o arquivo iniche_init.c, dentro da função SSSInitialTask irá encontrar 2 linhas de código e fazer alterações:
+	10 Clique em Add-> Apply-> OK
+	11 Abra o Programmer, aperte Auto Detect e aperte Start, caso o Progress esteja verde, continue caso contrário verifique 	conexão da JTAG
+	12 Deixe aberto o Programmer e a janela "OpenCore Plus Status" e inicie o Eclipse em Tools -> Nios II Software Build Tools 	for Eclipse
+	13 No Workspace selecione SeuCaminhoAtéaPasta\DE2_NET\software
+	14 Agora existem 2 opções:
+		14.1 Se os projetos simple_socket e simple_socket_bsp estão aparecendo e são expandíveis (pastinha cor amarela):
+			14.1.1 Clique com o botão direito em cada projeto e clique em Clean Project
+			14.1.2 Abra o arquivo iniche_init.c, dentro da função SSSInitialTask irá encontrar 2 linhas de código e fazer 		alterações:
 			- sa.sin_port = htons(7777); // ALTERAR PORTA A SER UTILIZADA AQUI
 			- res = inet_pton(AF_INET, "192.168.1.110", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
-		16.1.3 Vá em Project -> Build All
-		16.1.4 Se tudo comilar sem erros, é possível fazer Botão direito em simple_socket -> Run As...->Nios II Hardware
-		16.1.5 Se der algum erro na hora de rodar apenas, tente denovo, o Eclipse tem dessas
-		16.1.6 Se rodar como deve, algo assim deve aparecer no Nios II Console:
-			InterNiche Portable TCP/IP, v3.1 
+			14.1.3 Vá em Project -> Build All
+			14.1.4 Se tudo comilar sem erros, é possível fazer Botão direito em simple_socket -> Run As...->Nios II 		Hardware
+			14.1.5 Se der algum erro na hora de rodar apenas, tente denovo, o Eclipse tem dessas
+			14.1.6 Se rodar como deve, algo assim deve aparecer no Nios II Console:
+				InterNiche Portable TCP/IP, v3.1 
 
 			Copyright 1996-2008 by InterNiche Technologies. All rights reserved. 
 			Your Ethernet MAC address is 00:07:ed:ff:cd:15
@@ -66,20 +67,20 @@ COMO RODAR:
 			Simple Socket Server starting up
 			estou aqui
 			Socket criado
-		16.1.7 Se deu certo, precisa testar com um server agora. Primeiro pare o programa do Eclipse.
-		16.1.8 Pegue o tcpserver.py (fazendo alterações de ip e porta dentro) fornecido 
-		  e rode ele fazendo o comando python .\tcpserver.py na linha de comando no local que estiver o arquivo
-		16.1.9 Rode novamente com Run As->Nios II Hardware
-		16.1.10 Se o roteador não bloqueou nada, esta pronto! O LCD da placa deve estar mostrando o arquivo atual,
-		  SW0 e SW1 mudam o arquivo pedido e clicar com o KEY1 pede o arquivo. Tendo sucesso o arquivo aparece no
-		  LCD, podendo ser movido para cima ou para baixo com KEY3 e KEY2. Clicar KEY1 novamente retorna a seleção
-		  de arquivo
+			14.1.7 Se deu certo, precisa testar com um server agora. Primeiro pare o programa do Eclipse.
+			14.1.8 Pegue o tcpserver.py (fazendo alterações de ip e porta dentro) fornecido 
+			  e rode ele fazendo o comando python .\tcpserver.py na linha de comando no local que estiver o arquivo
+			14.1.9 Rode novamente com Run As->Nios II Hardware
+			14.1.10 Se o roteador não bloqueou nada, esta pronto! O LCD da placa deve estar mostrando o arquivo atual,
+			  SW0 e SW1 mudam o arquivo pedido e clicar com o KEY1 pede o arquivo. Tendo sucesso o arquivo aparece no
+			  LCD, podendo ser movido para cima ou para baixo com KEY3 e KEY2. Clicar KEY1 novamente retorna a seleção
+			  de arquivo
 
-	16.2 Se os projetos simple_socket e simple_socket_bsp estão aparecendo e NÃO são expandíveis (pastinha cor azul):
-		16.2.1 Delete ambos com botão direito -> Delete (sem deletar do computador)
-		16.2.2 Botão direito no Project Explorer->Import...->Nios II Software Build Tools Project->
+		14.2 Se os projetos simple_socket e simple_socket_bsp estão aparecendo e NÃO são expandíveis (pastinha cor azul):
+			14.2.1 Delete ambos com botão direito -> Delete (sem deletar do computador)
+			14.2.2 Botão direito no Project Explorer->Import...->Nios II Software Build Tools Project->
 			   Import Custom Makefile for Nios II Software Build Tools Project-> Next->Browse...->
 			   Vá para a pasta do projeto DE2_NET/software/simple_socket_bsp-> OK/Abrir
 			   Project name: simple_socket_bsp
 			   Faça a mesma coisa para o simple_socket (deixando o Project name SEM o _bsp)
-		16.2.3 Retome a partir de 16.1.1
+			14.2.3 Retome a partir de 14.1.1
