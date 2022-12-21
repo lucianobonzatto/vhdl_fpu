@@ -10,6 +10,9 @@ a fpu utiliza a construção da IEEE:	1bit de sinal
 
 para a fpu utilizamos uma biblioteca presente na opencores.org
 
+Como interação, o server recebe uma string e envia para o NIOS que utiliza para formular os valores e a operação
+com isso, o NIOS envia para user hardware esses valores, salvando eles nos seus respectivos registradores
+e então le o resultado obtido e envia ele ao server.
 
 ARQUIVOS:
 
@@ -30,7 +33,6 @@ COMO RODAR:
 7 Feche o Qsys
 8 No Project Navigator, aba Files, clique com o botão direito em Files->Add/Remove Files in Project
 9 Clique no [...], entre em system_0/synthesis, mude o tipo de arquivo para todos, selecione o arquivo system_0.qip
-
 
 12 Clique em Add-> Apply-> OK
 13 Abra o Programmer, aperte Auto Detect e aperte Start, caso o Progress esteja verde, continue caso contrário verifique conexão da JTAG
