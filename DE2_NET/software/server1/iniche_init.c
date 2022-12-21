@@ -188,7 +188,7 @@ void SSSInitialTask(void *task_data)
   memset(&sa, 0, sizeof sa);
   sa.sin_family = AF_INET;
   sa.sin_port = htons(7777); // ALTERAR PORTA A SER UTILIZADA AQUI
-  res = inet_pton(AF_INET, "192.168.0.73", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
+  res = inet_pton(AF_INET, "10.17.0.33", &sa.sin_addr); //ALTERAR O IP DO SERVIDOR AQUI
   if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
 	perror("connect failed");
 	close(SocketFD);
@@ -273,19 +273,10 @@ void SSSInitialTask(void *task_data)
 		  printf("\nval2_wr = %f -> ", val2);
 		  print_float32(f2);
 		  printf("\n");
-//		  uint32_t f1 = h1;
-//		  uint32_t f2 = h2;
 		  //write
 		  IOWR(WEB_FPU_0_BASE, 0x0000, f1);
 		  IOWR(WEB_FPU_0_BASE, 0x0001, f2);
 		  IOWR(WEB_FPU_0_BASE, 0x0002, operation);
-//		  printf("val1_wr -> ");
-//		  print_float32(f1);
-//		  printf("\nval2_wr -> ");
-//		  print_float32(f2);
-//		  printf("\nop_wr -> ");
-//		  print_float32(operation);
-//		  printf("\n");
 
 		  //read
 		  uint32_t val1_rd = IORD(WEB_FPU_0_BASE,0x0008);

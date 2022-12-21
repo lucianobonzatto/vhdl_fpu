@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>21/12/2022 02:47:59</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1671598079279</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>21/12/2022 10:21:40</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1671625300712</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\vhdl_fpu\DE2_NET\software\server1_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\vhdl_fpu\DE2_NET\system_0.sopcinfo</SopcDesignFile>
