@@ -1,5 +1,9 @@
 
 vcom -reportprogress 300 -work work {../../vhdl/reg_32/reg_32.vhd}
+vcom -reportprogress 300 -work work {../../vhdl/divisao/divisao.vhd}
+vcom -reportprogress 300 -work work {../../vhdl/multiplicacao/multiplicacao.vhd}
+vcom -reportprogress 300 -work work {../../vhdl/soma/soma.vhd}
+vcom -reportprogress 300 -work work {../../vhdl/subtracao/subtracao.vhd}
 vcom -reportprogress 300 -work work {../../vhdl/web_interface/web_interface.vhd}
 vcom -reportprogress 300 -work work {../../vhdl/web_interface/web_interface_tb.vhd}
 vsim rtl_work.web_interface_tb
@@ -27,6 +31,12 @@ add wave -position end  sim:/web_interface_tb/DUT/VAL2/WRITE_EN
 add wave -hex -position end  sim:/web_interface_tb/DUT/OPER/DATA_IN
 add wave -hex -position end  sim:/web_interface_tb/DUT/OPER/DATA_OUT
 add wave -position end  sim:/web_interface_tb/DUT/OPER/WRITE_EN
+
+
+add wave -hex -position end  sim:/web_interface_tb/DUT/result_divi
+add wave -hex -position end  sim:/web_interface_tb/DUT/result_mult
+add wave -hex -position end  sim:/web_interface_tb/DUT/result_soma
+add wave -hex -position end  sim:/web_interface_tb/DUT/result_subt
 
 
 run 164000000ps
