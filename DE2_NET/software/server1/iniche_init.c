@@ -80,8 +80,7 @@ void print_float(float f) {
 	union ufloat uf;
 	uf.f = f;
 	int i = 0;
-	int j = 0;
-	for(i = 0; i < 32; i++) {
+	for(i = 31; i >= 0; i--) {
 		if((uf.b & 1<<i) == 1<<i) {
 			printf("1");
 		} else {
@@ -90,6 +89,49 @@ void print_float(float f) {
 	}
 }
 
+void print_float32(uint32_t f) {
+	int i = 0;
+	for(i = 31; i >= 0; i--) {
+		if((f & 1<<i) == 1<<i) {
+			printf("1");
+		} else {
+			printf("0");
+		}
+	}
+}
+
+void print_half(uint16_t h) {
+	int i = 0;
+	for(i = 15; i >= 0; i--) {
+		if((h & 1<<i) == 1<<i) {
+			printf("1");
+		} else {
+			printf("0");
+		}
+	}
+}
+
+uint32_t as_uint(const float x) {
+    return *(uint32_t*)&x;
+}
+
+float as_float(const uint32_t x) {
+    return *(float*)&x;
+}
+
+float half_to_float(const uint16_t  x) { // IEEE-754 16-bit floating-point format (without infinity): 1-5-10, exp-15, +-131008.0, +-6.1035156E-5, +-5.9604645E-8, 3.311 digits
+    const uint32_t e = (x&0x7C00)>>10; // exponent
+    const uint32_t m = (x&0x03FF)<<13; // mantissa
+    const uint32_t v = as_uint((float)m)>>23; // evil log2 bit hack to count leading zeros in denormalized format
+    return as_float((x&0x8000)<<16 | (e!=0)*((e+112)<<23|m) | ((e==0)&(m!=0))*((v-37)<<23|((m<<(150-v))&0x007FE000))); // sign : normalized : denormalized
+}
+
+uint16_t float_to_half(const float x) { // IEEE-754 16-bit floating-point format (without infinity): 1-5-10, exp-15, +-131008.0, +-6.1035156E-5, +-5.9604645E-8, 3.311 digits
+    const uint32_t b = as_uint(x)+0x00001000; // round-to-nearest-even: add last bit after truncated mantissa
+    const uint32_t e = (b&0x7F800000)>>23; // exponent
+    const uint32_t m = b&0x007FFFFF; // mantissa; in line below: 0x007FF000 = 0x00800000-0x00001000 = decimal indicator flag - initial rounding
+    return (b&0x80000000)>>16 | (e>112)*((((e-112)<<10)&0x7C00)|m>>13) | ((e<113)&(e>101))*((((0x007FF000+m)>>(125-e))+1)>>1) | (e>143)*0x7FFF; // sign : normalized : denormalized : saturate
+}
 /* SSSInitialTask will initialize the NicheStack
  * TCP/IP Stack and then initialize the rest of the Simple Socket Server example 
  * RTOS structures and tasks. 
@@ -154,13 +196,6 @@ void SSSInitialTask(void *task_data)
   }
   while (1){
 
-	  //read
-	  int val1_res = IORD(FPU_0_BASE,0x0008);
-	  printf("val1_res -> %d\n", val1_res);
-	  int val2_res = IORD(FPU_0_BASE,0x0009);
-	  printf("val2_res -> %d\n", val2_res);
-	  int oper_res = IORD(FPU_0_BASE,0x000a);
-	  printf("oper_res -> %d\n", oper_res);
 	  int buf_size = recv(SocketFD, buf, sizeof(buf), 0);
 	    if (buf_size < 0) //exemplo de recebimento
 	    {
@@ -201,7 +236,7 @@ void SSSInitialTask(void *task_data)
 	    float1[float1_idx] = '\0';
 	    float2[float2_idx] = '\0';
 
-	    int operation = 0;
+	    uint32_t operation = 0;
 	    int valida = first_space != -1 && second_space != -1;
 	    valida &= second_space-first_space == 2;
 	    valida &= float1_idx > 0 && float2_idx > 0;
@@ -228,19 +263,45 @@ void SSSInitialTask(void *task_data)
 		    printf("COMANDO VALIDO: %f %d %f\n", val1, operation, val2);
 		    printf("Escrevendo dados na FPU...\n");
 
-		  printf("VALOR 1: %f -> ", val1);
-		  print_float(val1);
-		  printf("\nVALOR 2: %f -> ", val2);
-		  print_float(val2);
+		  uint16_t h1 = float_to_half(val1);
+		  uint16_t h2 = float_to_half(val2);
+		  uint32_t f1 = *(uint32_t*)&val1;
+		  uint32_t f2 = *(uint32_t*)&val2;
+		  printf("op_wr   = %u -> ", operation);
+		  printf("\nval1_wr = %f -> ", val1);
+		  print_float32(f1);
+		  printf("\nval2_wr = %f -> ", val2);
+		  print_float32(f2);
 		  printf("\n");
+//		  uint32_t f1 = h1;
+//		  uint32_t f2 = h2;
 		  //write
-		  printf("0x0000 -> 0x000f\n");
-		  IOWR(FPU_0_BASE, 0x0000, 0x000f);
-		  printf("0x0001 -> 0x00f0\n");
-		  IOWR(FPU_0_BASE, 0x0001, 0x00f0);
-		  printf("0x0002 -> 0x0f00\n");
-		  IOWR(FPU_0_BASE, 0x0002, 0x0f00);
+		  IOWR(FPU_0_BASE, 0x0000, f1);
+		  IOWR(FPU_0_BASE, 0x0001, f2);
+		  IOWR(FPU_0_BASE, 0x0002, operation);
+//		  printf("val1_wr -> ");
+//		  print_float32(f1);
+//		  printf("\nval2_wr -> ");
+//		  print_float32(f2);
+//		  printf("\nop_wr -> ");
+//		  print_float32(operation);
+//		  printf("\n");
 
+		  //read
+		  uint32_t val1_rd = IORD(FPU_0_BASE,0x0008);
+		  uint32_t val2_rd = IORD(FPU_0_BASE,0x0009);
+		  uint32_t oper_rd = IORD(FPU_0_BASE,0x000a);
+		  uint32_t res_rd = IORD(FPU_0_BASE,0x000b);
+
+		  printf("val1_rd = %f -> ", *(float*)&val1_rd);
+		  print_float32(val1_rd);
+		  printf("\nval2_rd = %f -> ", *(float*)&val2_rd);
+		  print_float32(val2_rd);
+		  printf("\nres_rd  = %f -> ", *(float*)&res_rd);
+		  print_float32(res_rd);
+		  printf("\n");
+
+		  sprintf(buf, "%f", *(float*)&res_rd);
 	    } else {
 	    	printf("COMANDO INVALIDO\n");
 	    	buf[0] = '\0';
