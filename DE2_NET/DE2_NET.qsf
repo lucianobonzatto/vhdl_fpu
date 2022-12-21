@@ -544,6 +544,22 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE fpu/sqrt.vhd
+set_global_assignment -name VHDL_FILE fpu/serial_mul.vhd
+set_global_assignment -name VHDL_FILE fpu/serial_div.vhd
+set_global_assignment -name VHDL_FILE fpu/pre_norm_sqrt.vhd
+set_global_assignment -name VHDL_FILE fpu/pre_norm_mul.vhd
+set_global_assignment -name VHDL_FILE fpu/pre_norm_div.vhd
+set_global_assignment -name VHDL_FILE fpu/pre_norm_addsub.vhd
+set_global_assignment -name VHDL_FILE fpu/post_norm_sqrt.vhd
+set_global_assignment -name VHDL_FILE fpu/post_norm_mul.vhd
+set_global_assignment -name VHDL_FILE fpu/post_norm_div.vhd
+set_global_assignment -name VHDL_FILE fpu/post_norm_addsub.vhd
+set_global_assignment -name VHDL_FILE fpu/mul_24.vhd
+set_global_assignment -name VHDL_FILE fpu/fpupack.vhd
+set_global_assignment -name VHDL_FILE fpu/fpu.vhd
+set_global_assignment -name VHDL_FILE fpu/comppack.vhd
+set_global_assignment -name VHDL_FILE fpu/addsub_28.vhd
 set_global_assignment -name VHDL_FILE vhdl/divisao/divisao.vhd
 set_global_assignment -name VHDL_FILE vhdl/display7seg/display7seg.vhd
 set_global_assignment -name VHDL_FILE vhdl/web_interface/web_interface.vhd
@@ -557,3 +573,5 @@ set_global_assignment -name VHDL_FILE vhdl/multiplicacao/multiplicacao.vhd
 set_global_assignment -name VHDL_FILE vhdl/soma/soma.vhd
 set_global_assignment -name VHDL_FILE vhdl/subtracao/subtracao.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation

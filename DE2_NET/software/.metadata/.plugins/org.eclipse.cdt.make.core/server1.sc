@@ -4,6 +4,14 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1412747579;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1412747579.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1478038087;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1082760588">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h/nios2"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/nios2"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/HAL/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/drivers/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h/nios2"/>
@@ -239,6 +247,14 @@
 </instance>
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1412747579;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1412747579.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.953776198;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.530672060">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h/nios2"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/nios2"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/HAL/inc"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/"/>
+<includePath path="C:/Users/hadryan/clones/vhdl_fpu/DE2_NET/software/server1_bsp/drivers/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/inc"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h"/>
 <includePath path="C:/vhdl_fpu/DE2_NET/software/server1_bsp/iniche/src/h/nios2"/>

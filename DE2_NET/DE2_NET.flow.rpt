@@ -1,5 +1,5 @@
 Flow report for DE2_NET
-Mon Dec 19 22:47:28 2022
+Tue Dec 20 23:44:45 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 19 22:47:24 2022           ;
+; Flow Status                        ; Successful - Tue Dec 20 23:44:42 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_NET                                         ;
 ; Top-level Entity Name              ; DE2_NET                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 7,271 / 33,216 ( 22 % )                         ;
-;     Total combinational functions  ; 6,458 / 33,216 ( 19 % )                         ;
-;     Dedicated logic registers      ; 4,285 / 33,216 ( 13 % )                         ;
-; Total registers                    ; 4353                                            ;
+; Total logic elements               ; 7,106 / 33,216 ( 21 % )                         ;
+;     Total combinational functions  ; 6,378 / 33,216 ( 19 % )                         ;
+;     Dedicated logic registers      ; 4,157 / 33,216 ( 13 % )                         ;
+; Total registers                    ; 4225                                            ;
 ; Total pins                         ; 429 / 475 ( 90 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 387,200 / 483,840 ( 80 % )                      ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/19/2022 22:45:12 ;
+; Start date & time ; 12/20/2022 23:43:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_NET             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+----------------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name                                        ; Section Id ;
 +-------------------------------------+------------------------------------------------------------+---------------+----------------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073160263910.167150071115104                            ; --            ; --                                                 ; --         ;
+; COMPILER_SIGNATURE_ID               ; 237901794555588.167159063617904                            ; --            ; --                                                 ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_avalon_sc_fifo                              ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_merlin_burst_adapter                        ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                       ; --            ; altera_merlin_master_agent                         ; --         ;
@@ -237,11 +237,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:59     ; 1.0                     ; 4937 MB             ; 00:00:56                           ;
-; Fitter                    ; 00:00:59     ; 1.0                     ; 5001 MB             ; 00:00:54                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4609 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4653 MB             ; 00:00:03                           ;
-; Total                     ; 00:02:05     ; --                      ; --                  ; 00:01:56                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4925 MB             ; 00:00:21                           ;
+; Fitter                    ; 00:00:18     ; 1.0                     ; 4991 MB             ; 00:00:17                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -250,10 +250,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-2DR00BI  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-KOKIGQ4  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-KOKIGQ4  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-KOKIGQ4  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-KOKIGQ4  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

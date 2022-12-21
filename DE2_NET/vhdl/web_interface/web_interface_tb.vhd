@@ -39,22 +39,23 @@ begin
 		rst <= '0';
 		READ_EN <= '1';
 		WRITE_EN <= '1';
+
 		wait for 15 ns;
+
 		rst <= '1';
 		CS <= '1';
-		WRITEDATA <= x"00000000";
-		wait for 17 ns;
-		
-		ADD <= x"2";
-		WRITEDATA <= x"00000000";
+		ADD <= x"0";
+		WRITEDATA <= "01000000000000000000000000000000";
 		wait for 20 ns;
 		
 		ADD <= x"1";
-		WRITEDATA <= x"00000002";
+		WRITEDATA <= "01000000000000000000000000000000";
 		wait for 20 ns;
-		ADD <= x"0";
-		WRITEDATA <= x"81000005";
+		
+		ADD <= x"2";
+		WRITEDATA <= "00000000000000000000000000000000";
 		wait for 20 ns;
+
 		ADD <= x"b";
 		wait for 20 ns;
 		

@@ -15,6 +15,7 @@
 		<item value="false" key="wholeword"/>
 		<item value="fpu" key="selection"/>
 		<list key="findhistory">
+			<item value="FPU"/>
 			<item value="fpu"/>
 			<item value="rx_len"/>
 		</list>
