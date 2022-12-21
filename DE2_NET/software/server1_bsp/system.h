@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
  *
- * Generated: Wed Dec 21 02:18:55 BRST 2022
+ * Generated: Wed Dec 21 02:47:59 BRST 2022
  */
 
 /*
@@ -168,6 +168,7 @@
 #define __DM9000A
 #define __ISP1362_IF
 #define __SEG7_LUT_8
+#define __SRAM_16BIT_512K
 #define __WEB_FPU
 
 
@@ -552,6 +553,20 @@
 
 
 /*
+ * sram_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sram_0 sram_16bit_512k
+#define SRAM_0_BASE 0x1a00000
+#define SRAM_0_IRQ -1
+#define SRAM_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SRAM_0_NAME "/dev/sram_0"
+#define SRAM_0_SPAN 524288
+#define SRAM_0_TYPE "sram_16bit_512k"
+
+
+/*
  * switch_pio configuration
  *
  */
@@ -590,7 +605,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1671595929
+#define SYSID_QSYS_0_TIMESTAMP 1671597820
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 

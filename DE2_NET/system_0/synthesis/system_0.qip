@@ -2,7 +2,7 @@ set_global_assignment -entity "system_0" -library "system_0" -name IP_TOOL_NAME 
 set_global_assignment -entity "system_0" -library "system_0" -name IP_TOOL_VERSION "13.0sp1"
 set_global_assignment -entity "system_0" -library "system_0" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "system_0" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../system_0.sopcinfo"]
-set_instance_assignment -entity "system_0" -library "system_0" -name SLD_INFO "QSYS_NAME system_0 HAS_SOPCINFO 1 GENERATION_ID 1671595929"
+set_instance_assignment -entity "system_0" -library "system_0" -name SLD_INFO "QSYS_NAME system_0 HAS_SOPCINFO 1 GENERATION_ID 1671597820"
 set_global_assignment -library "system_0" -name MISC_FILE [file join $::quartus(qip_path) "../../system_0.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "system_0" -name MISC_FILE [file join $::quartus(qip_path) "../../system_0.qsys"]
@@ -39,6 +39,7 @@ set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_audio_0_avalon_slave_0_translator.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_vga_0_avalon_slave_0_translator.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_seg7_display_avalon_slave_0_translator.vhd"]
+set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_sram_0_avalon_slave_0_translator.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_web_fpu_0_avalon_slave_0_translator.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_rst_controller.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "system_0_rst_controller_002.vhd"]
@@ -60,6 +61,7 @@ set_global_assignment -library "system_0" -name SDC_FILE [file join $::quartus(q
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_adapter.sv"]
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_traffic_limiter.sv"]
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_st_pipeline_base.v"]
+set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/system_0_id_router_023.sv"]
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/system_0_id_router_005.sv"]
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/system_0_id_router_003.sv"]
 set_global_assignment -library "system_0" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/system_0_id_router_001.sv"]
@@ -89,6 +91,7 @@ set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/serial_div.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/serial_mul.vhd"]
 set_global_assignment -library "system_0" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/sqrt.vhd"]
+set_global_assignment -library "system_0" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SRAM_16Bit_512K.v"]
 set_global_assignment -library "system_0" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SEG7_LUT.v"]
 set_global_assignment -library "system_0" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SEG7_LUT_8.v"]
 set_global_assignment -library "system_0" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DM9000A_IF.v"]
@@ -176,6 +179,9 @@ set_global_assignment -entity "altera_merlin_burst_adapter" -library "system_0" 
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "system_0" -name IP_TOOL_NAME "altera_merlin_traffic_limiter"
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "system_0" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "system_0" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "system_0_id_router_023" -library "system_0" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "system_0_id_router_023" -library "system_0" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "system_0_id_router_023" -library "system_0" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "system_0_id_router_005" -library "system_0" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "system_0_id_router_005" -library "system_0" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "system_0_id_router_005" -library "system_0" -name IP_TOOL_ENV "Qsys"

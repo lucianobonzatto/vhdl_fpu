@@ -3671,3 +3671,22 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-12-21 02:22:23.070
 !MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/server1/server1.elf]
+!SESSION 2022-12-21 02:47:13.436 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 02:48:05.113
+!MESSAGE Indexed 'server1_bsp' (233 sources, 179 headers) in 4,61 sec: 10.617 declarations; 45.085 references; 95 unresolved inclusions; 9 syntax errors; 494 unresolved names (0,88%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-12-21 02:48:05.151
+!MESSAGE Indexed 'server1' (6 sources, 16 headers) in 0,03 sec: 162 declarations; 788 references; 48 unresolved inclusions; 6 syntax errors; 197 unresolved names (17,18%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-21 02:50:44.870
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-12-21 02:50:46.916
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 /cygdrive/c/vhdl_fpu/DE2_NET/software/server1/server1.elf]

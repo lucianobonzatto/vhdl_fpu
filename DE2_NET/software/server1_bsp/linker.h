@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
  *
- * Generated: Wed Dec 21 02:18:55 BRST 2022
+ * Generated: Wed Dec 21 02:47:59 BRST 2022
  */
 
 /*
@@ -75,6 +75,8 @@
 #define SDRAM_0_BEFORE_EXCEPTION_REGION_SPAN 32
 #define SDRAM_0_REGION_BASE 0x800020
 #define SDRAM_0_REGION_SPAN 8388576
+#define SRAM_0_REGION_BASE 0x1a00000
+#define SRAM_0_REGION_SPAN 524288
 
 
 /*

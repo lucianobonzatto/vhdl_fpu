@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
 # SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
 #
-# Generated: Wed Dec 21 02:18:55 BRST 2022
+# Generated: Wed Dec 21 02:47:59 BRST 2022
 
 # DO NOT MODIFY THIS FILE
 #
@@ -51,6 +51,9 @@ memory 0x800000 0x1000000 cache
 
 # cfi_flash_0
 memory 0x1400000 0x1800000 cache
+
+# sram_0
+memory 0x1a00000 0x1a80000 cache
 
 # epcs_controller
 memory 0x1a81800 0x1a82000 cache

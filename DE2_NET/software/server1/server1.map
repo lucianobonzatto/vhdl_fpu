@@ -589,6 +589,7 @@ sdram_0_BEFORE_EXCEPTION 0x00800000         0x00000020
 sdram_0          0x00800020         0x007fffe0
 reset            0x01400000         0x00000020
 cfi_flash_0      0x01400020         0x003fffe0
+sram_0           0x01a00000         0x00080000
 epcs_controller  0x01a81800         0x00000800
 *default*        0x00000000         0xffffffff
 
@@ -615,6 +616,7 @@ END GROUP
 LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2\libgcc.a
                 0x00800000                __alt_mem_sdram_0 = 0x800000
                 0x01400000                __alt_mem_cfi_flash_0 = 0x1400000
+                0x01a00000                __alt_mem_sram_0 = 0x1a00000
                 0x01a81800                __alt_mem_epcs_controller = 0x1a81800
 
 .entry          0x01400000        0x0
@@ -2826,6 +2828,13 @@ LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/
                 0x01400020                . = ALIGN (0x4)
                 0x01400020                PROVIDE (_alt_partition_cfi_flash_0_end, ABSOLUTE (.))
                 0x01400020                PROVIDE (_alt_partition_cfi_flash_0_load_addr, LOADADDR (.cfi_flash_0))
+
+.sram_0         0x01a00000        0x0
+                0x01a00000                PROVIDE (_alt_partition_sram_0_start, ABSOLUTE (.))
+ *(.sram_0. sram_0.*)
+                0x01a00000                . = ALIGN (0x4)
+                0x01a00000                PROVIDE (_alt_partition_sram_0_end, ABSOLUTE (.))
+                0x01a00000                PROVIDE (_alt_partition_sram_0_load_addr, LOADADDR (.sram_0))
 
 .epcs_controller
                 0x01a81800        0x0

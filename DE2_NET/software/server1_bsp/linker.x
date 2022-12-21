@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: C:/vhdl_fpu/DE2_NET/system_0.sopcinfo
  *
- * Generated: Wed Dec 21 02:18:55 BRST 2022
+ * Generated: Wed Dec 21 02:47:59 BRST 2022
  */
 
 /*
@@ -54,12 +54,14 @@ MEMORY
     sdram_0 : ORIGIN = 0x800020, LENGTH = 8388576
     reset : ORIGIN = 0x1400000, LENGTH = 32
     cfi_flash_0 : ORIGIN = 0x1400020, LENGTH = 4194272
+    sram_0 : ORIGIN = 0x1a00000, LENGTH = 524288
     epcs_controller : ORIGIN = 0x1a81800, LENGTH = 2048
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_sdram_0 = 0x800000;
 __alt_mem_cfi_flash_0 = 0x1400000;
+__alt_mem_sram_0 = 0x1a00000;
 __alt_mem_epcs_controller = 0x1a81800;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
@@ -300,6 +302,16 @@ SECTIONS
     } > cfi_flash_0
 
     PROVIDE (_alt_partition_cfi_flash_0_load_addr = LOADADDR(.cfi_flash_0));
+
+    .sram_0 :
+    {
+        PROVIDE (_alt_partition_sram_0_start = ABSOLUTE(.));
+        *(.sram_0. sram_0.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_sram_0_end = ABSOLUTE(.));
+    } > sram_0
+
+    PROVIDE (_alt_partition_sram_0_load_addr = LOADADDR(.sram_0));
 
     .epcs_controller :
     {
