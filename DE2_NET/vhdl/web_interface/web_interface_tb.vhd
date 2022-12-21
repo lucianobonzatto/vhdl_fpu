@@ -12,7 +12,7 @@ component web_interface is
 			CS:			IN std_logic;
 			READ_EN:		IN std_logic;
 			WRITE_EN:	IN std_logic;
-			ADD:			IN std_logic_vector (2 downto 0);
+			ADD:			IN std_logic_vector (3 downto 0);
 			WRITEDATA:	IN  std_logic_vector(31 downto 0);
 			READDATA:	OUT std_logic_vector(31 downto 0));
 end component;
@@ -20,7 +20,7 @@ end component;
 TYPE state_type is (stop, idle, write_add, write_data, write_controle, write_stop, read_add, read_controle, read_stop);
 signal rst, clk: std_logic;
 signal READDATA, WRITEDATA: std_logic_vector(31 downto 0);
-signal ADD: std_logic_vector(1 downto 0);
+signal ADD: std_logic_vector(3 downto 0);
 signal state: state_type;
 signal CS, WRITE_EN, READ_EN: std_logic;
 signal wt_address: integer;
@@ -42,19 +42,20 @@ begin
 		wait for 15 ns;
 		rst <= '1';
 		CS <= '1';
-		WRITEDATA <= "00000000000000000000000000000000";
+		WRITEDATA <= x"00000000";
 		wait for 17 ns;
 		
-		ADD <= "000";
-		WRITEDATA <= "00000000000000000000000000001111";
+		ADD <= x"2";
+		WRITEDATA <= x"00000000";
 		wait for 20 ns;
 		
-		ADD <= "001";
-		WRITEDATA <= "00000000000000000000000011110000";
+		ADD <= x"1";
+		WRITEDATA <= x"00000002";
 		wait for 20 ns;
-		
-		ADD <= "010";
-		WRITEDATA <= "00000000000000000000111100000000";
+		ADD <= x"0";
+		WRITEDATA <= x"81000005";
+		wait for 20 ns;
+		ADD <= x"b";
 		wait for 20 ns;
 		
 		wait;
